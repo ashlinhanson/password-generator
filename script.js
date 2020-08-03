@@ -2,7 +2,7 @@
 
 //Assignment code + event listener to prompt questions when button pushed
 
-document.querySelector("#generate").addEventListener("click",writePassword);
+document.querySelector("#generate").addEventListener("click", writePassword);
 
 // Various Arrays
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -40,16 +40,16 @@ var confirmUpper;
         var confirmLower = confirm("click OK to confirm that you would like lower case letters in your password");
         var confirmUpper = confirm("click OK to confirm that you would like upper case letters in your password");
             // Loop for if answer is outside the parameters
-            while(confirmUpper === false && confirmLower === false && confirmNum === false && confirmSym === false) {
-                alert("You must choose at least one option");
-                var confirmSym = confirm("click OK to confirm that would like symbols or special characters in your password");
-                var confirmNum = confirm("click OK to confirm that would like numbers in your password");
-                var confirmLower = confirm("click OK to confirm that you would like lower case letters in your password");
-                var confirmUpper = confirm("click OK to confirm that you would like upper case letters in your password");
-            }
+        while(confirmUpper === false && confirmLower === false && confirmNum === false && confirmSym === false) {
+        alert("You must choose at least one option");
+        var confirmSym = confirm("click OK to confirm that would like symbols or special characters in your password");
+        var confirmNum = confirm("click OK to confirm that would like numbers in your password");
+        var confirmLower = confirm("click OK to confirm that you would like lower case letters in your password");
+        var confirmUpper = confirm("click OK to confirm that you would like upper case letters in your password");
+        }
 
         // assign an action to the password parameters 
-        varPasswordCharacters = []
+        var passwordCharacters = []
 
         if (confirmSym) {
             passwordCharacters = passwordCharacters.concat(symbols)

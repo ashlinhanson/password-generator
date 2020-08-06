@@ -11,12 +11,6 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 
-var confirmLength = "";
-var confirmNum;
-var confirmSym;
-var confirmLower;
-var confirmUpper;
-
 // prompt to confirm the number of characters they want in their password
     function generatePassword() {
         var confirmLength = prompt("How many characters do you want your password to be?");

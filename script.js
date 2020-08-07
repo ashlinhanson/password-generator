@@ -13,28 +13,28 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 // prompt to confirm the number of characters they want in their password
     function generatePassword() {
-        var confirmLength = prompt("How many characters do you want your password to be?");
+        var confirmLength = parseInt(prompt("Enter the number of characters you would like in your password. Must be between 8 - 128."));
 
         // Loop if they don't put enough or too many 
-        while(confirmLength <= 7 || confirmLength >= 129) {
+        while(confirmLength <= 7 || confirmLength >= 129 || isNaN(confirmLength)) {
             alert("Password length needs to be between 8-128 characters. Please try again. :)");
-            var confirmLength = prompt("How many characters do you want yout password to be?");
+            var confirmLength = parseInt(prompt("How many characters do you want your password to be?"));
         }
 
             // Reiterate the number of characters the user chose
             alert(`Your password will have ${confirmLength} characters`);
 
             //have user choose that character types they want in their password
-            var confirmSym = confirm("click OK to confirm that would like symbols or special characters in your password");
-            var confirmNum = confirm("click OK to confirm that would like numbers in your password");
+            var confirmSym = confirm("click OK to confirm that you would like symbols or special characters in your password");
+            var confirmNum = confirm("click OK to confirm that you would like numbers in your password");
             var confirmLower = confirm("click OK to confirm that you would like lower case letters in your password");
             var confirmUpper = confirm("click OK to confirm that you would like upper case letters in your password");
             
             //Loop for if the user doesn't choose a character type
             while(!confirmUpper && !confirmLower && !confirmNum && !confirmSym) {
             alert("You must choose at least one option");
-            var confirmSym = confirm("click OK to confirm that would like symbols or special characters in your password");
-            var confirmNum = confirm("click OK to confirm that would like numbers in your password");
+            var confirmSym = confirm("click OK to confirm that you would like symbols or special characters in your password");
+            var confirmNum = confirm("click OK to confirm that you would like numbers in your password");
             var confirmLower = confirm("click OK to confirm that you would like lower case letters in your password");
             var confirmUpper = confirm("click OK to confirm that you would like upper case letters in your password");
             }
